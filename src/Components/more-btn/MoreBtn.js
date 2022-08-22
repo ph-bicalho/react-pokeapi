@@ -1,18 +1,27 @@
 import React from 'react'
 import './more-btn.css'
-import { getPokemons } from '../../services/Api';
-import { Pokedex } from '../pokedex/Pokedex';
+// import { getPokemons } from '../../services/Api';
+// import { Pokedex } from '../pokedex/Pokedex';
 
 
-function MoreBtn() {
-    
+function MoreBtn(props) {
+
+
+
   const loadMorePokemons = () =>{
-    console.log(getPokemons())
+
+    const {limit, setLimit} = props;
+        setLimit(limit + 10)
+        console.log(limit)
+      
+
+    
+         
   }
 
   return (
     <>
-     <button id='more' onClick={loadMorePokemons}> Carregar mais Pokemons </button> 
+     <button type ='btn' id='more' onClick={loadMorePokemons}> Carregar mais Pokemons </button> 
     </>
   )
 }

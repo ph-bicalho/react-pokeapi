@@ -43,7 +43,7 @@ function Navbar() {
 
       </nav>
 
-      {pokemon ? (<div className="card">
+      {pokemon ? (<div className="card result">
                 <img src={pokemon.sprites.front_default} alt={pokemon.name} />
                 <h3> {pokemon.name}</h3>
         </div>) : null}

@@ -6,18 +6,19 @@ import { getPokemons, getPokemonsData } from "../services/Api";
 import { Pokedex } from "../Components/pokedex/Pokedex";
 
 function Home() {
-  const [ loading, setLoading ] = useState(false);
-  const [ pokemons, setPokemons ] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [pokemons, setPokemons] = useState([]);
+  const [limit, setLimit] = useState(10)
+  const offset = 0
 
   const fetchPokemons = async () => {
     try {
       setLoading(true);
-      const data = await getPokemons();
-      const promisses = data.results.map( async (pokemon) => {
-        return await getPokemonsData(pokemon.url)
-      })
-
-      const results = await Promise.all(promisses)
+      const data = await getPokemons(limit, offset);
+      const promisses = data.results.map(async (pokemon) => {
+        return await getPokemonsData(pokemon.url);
+      });
+      const results = await Promise.all(promisses);
       setPokemons(results);
       setLoading(false);
     } catch (error) {
@@ -25,15 +26,8 @@ function Home() {
     }
   };
   useEffect(() => {
-    console.log("carregou");
     fetchPokemons();
-  }, []);
-
-  const loadMorePokemons = async() =>{
-    const page = await getPokemons();
-    const next = page.next
-    console.log(next)
-  }
+  }, [limit]);
 
   return (
     <>
@@ -42,9 +36,12 @@ function Home() {
       </header>
       <main>
         <h2> Selecione um Pokemon </h2>
-        <Pokedex pokemons={pokemons} loading={loading}></Pokedex>
+        <Pokedex pokemons={pokemons} loading={loading} />
 
-        <MoreBtn onClick={loadMorePokemons()}></MoreBtn>
+        <MoreBtn
+          limit = {limit}
+          setLimit = {setLimit}
+        />
       </main>
     </>
   );
