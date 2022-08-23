@@ -21,11 +21,21 @@ export const getPokemonsData = async (url) => {
     } catch (error) {
         console.log('Erro: ' , error)
     }
+    
 }
 
-export const searchPokemon = async (pokemon) => {
-    try {
-        let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+    export const searchPokemon = async (pokemon) => {
+        try {
+            let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+        const response = await fetch(url)
+        return await response.json()
+    } catch (error) {
+        console.log('Erro: ' , error)
+    }
+}
+    export const getPokemon = async (id) => {
+        try {
+            let url = `https://pokeapi.co/api/v2/pokemon/${id}`
         const response = await fetch(url)
         return await response.json()
     } catch (error) {

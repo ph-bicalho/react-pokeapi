@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Components/navbar/Navbar";
-// import { Card } from "../Components/cards/Card";
 import { MoreBtn } from "../Components/more-btn/MoreBtn";
 import { getPokemons, getPokemonsData } from "../services/Api";
 import { Pokedex } from "../Components/pokedex/Pokedex";

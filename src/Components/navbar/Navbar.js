@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './navbar.css'
 import { searchPokemon } from '../../services/Api';
-import { Card } from "../cards/Card";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [search, setSearch] = useState('')
@@ -43,9 +43,13 @@ function Navbar() {
 
       </nav>
 
-      {pokemon ? (<div className="card result">
+      {pokemon ? (
+              
+                <div className="card result">
+                  <Link to={'/pokemon/' + pokemon.id} id={pokemon.id}>
                 <img src={pokemon.sprites.front_default} alt={pokemon.name} />
                 <h3> {pokemon.name}</h3>
+                </Link>
         </div>) : null}
 
       
