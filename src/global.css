@@ -5,7 +5,10 @@
 }
 a{
   text-decoration: none;
+  color: #cecece;
 }
+
+
 
 body {
   margin: 0;
@@ -31,6 +34,7 @@ ul{
 main{
  height:100%;
  max-width: 1200px;
+ padding-bottom: 2rem;
  margin: auto;
  display: flex;
  flex-direction: column;
@@ -39,4 +43,134 @@ main{
 }
 main h2{
   padding: 3rem 0;
+}
+.pokemon-card{
+  max-width: 1000px ;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.164);
+  
+  position: relative;
+  border-radius: 10px;
+}
+.pokemon-card .container{
+  display: flex;
+}
+.pokemon-id{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.pokemon-info {
+  text-align: initial;
+  width: 300px;
+  padding: 10px 20px;
+}
+
+.pokemon-info .name{
+  text-transform: capitalize;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+.pokemon-moves{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px;
+    width: 300px;
+}
+.pokemon-moves button{
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.pokemon-card img{
+  width: 350px;
+}
+.pokemon-info .pokemon-type{
+  margin:6px 0;
+}
+
+.pokemon-info span, .more-info span{
+  color: #fff;
+  font-weight: 600;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 5px ;
+  text-transform: capitalize;
+}
+
+.normal{
+  background: var(--normal);
+}
+.fire{
+  background: var(--fire);
+}
+.water{
+  background: var(--water);
+}
+.grass{
+  background: var(--grass);
+}
+.electric{
+  background: var(--electric);
+}
+.ice{
+  background: var(--ice);
+}
+.fighting{
+  background: var(--fighting);
+}
+.poison{
+  background: var(--poison);
+}
+.ground{
+  background: var(--ground);
+}
+.flying{
+  background: var(--flying);
+}
+.psychic{
+  background: var(--psychic);
+}
+.bug{
+  background: var(--bug);
+}
+.rock{
+  background: var(--rock);
+}
+.ghost{
+  background: var(--ghost);
+}
+.dark{
+  background: var(--dark);
+}
+.dragon{
+  background: var(--dragon);
+}
+.steel{
+  background: var(--steel);
+}
+.fairy{
+  background: var(--fairy);
+}
+.more-info{
+  width: 70%;
+}
+
+.more-info h3{
+  padding-bottom: 15px;
+}
+
+.more-info span{
+  padding: 8px 10px;
+}
+
+.retornar{
+  color: #fff;
+  margin: 20px;
+  padding: 15px;
+  background-color: rgb(89, 46, 131);
 }

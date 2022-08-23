@@ -3,6 +3,7 @@ import Navbar from "../Components/navbar/Navbar";
 import { MoreBtn } from "../Components/more-btn/MoreBtn";
 import { getPokemons, getPokemonsData } from "../services/Api";
 import { Pokedex } from "../Components/pokedex/Pokedex";
+import{Footer} from   '../Components/footer/Footer'
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -29,7 +30,7 @@ function Home() {
   }, [limit]);
 
   return (
-    <>
+    <div className="Home">
       <header>
         <Navbar />
       </header>
@@ -42,7 +43,9 @@ function Home() {
           setLimit = {setLimit}
         />
       </main>
-    </>
+
+        <Footer/>
+    </div>
   );
 }
 

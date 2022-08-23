@@ -1,0 +1,15 @@
+.Home{
+    position: relative;
+    padding-bottom: 2.2rem;
+}
+footer{
+    background-color: rgba(10, 6, 54, 0.336);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a{
+    color: orange;
+    
+}

@@ -36,8 +36,8 @@ function Navbar() {
         </div>
         
         <div>
-            <a href="#" >Lista de Pokemons</a>
-            <a href="#">Pokemons Favoritos</a>
+            <Link to ='/'>Lista de Pokemons</Link>
+            
         </div>
         
 

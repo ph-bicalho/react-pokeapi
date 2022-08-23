@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './variables.css'
 import './global.css';
 import Home from './pages/Home';
 import Pokemon from './pages/Pokemon';
