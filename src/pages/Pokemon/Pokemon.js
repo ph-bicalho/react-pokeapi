@@ -20,6 +20,7 @@ const Pokemon = (props) => {
 
   useEffect(() => {
     fetchPokemon();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
   console.clear();
   return (
