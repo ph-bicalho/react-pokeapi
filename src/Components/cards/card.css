@@ -10,6 +10,10 @@
     margin: 10px;
     border-radius: 15px;
     box-shadow: 10px 10px 15px -15px black;
+    transition: 300ms ease ;
+}
+.card:hover{
+  border: 2px solid rgb(100, 255, 100)
 }
 
 .card h3{

@@ -14,10 +14,9 @@ const Pokedex = (props) => {
           <ul className="pokedexGrid">
             {pokemons &&
               pokemons.map((pokemon, index) => {
-                console.log(pokemon)
                 return (
                   <li key={index}>
-                    <Link to={'/pokemon/' + pokemon.id} id={pokemon.id}>
+                    <Link to={"/pokemon/" + pokemon.id} id={pokemon.id}>
                       <Card pokemon={pokemon} />
                     </Link>
                   </li>
